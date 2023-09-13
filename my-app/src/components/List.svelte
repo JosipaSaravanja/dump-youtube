@@ -4,9 +4,7 @@
 </script>
 
 <div>
-    {#each $list as item}
-        <div>
-        {item}
-        </div>
-    {/each}
+  {#each $list as item}
+    <!---->
+  {/each}
 </div>

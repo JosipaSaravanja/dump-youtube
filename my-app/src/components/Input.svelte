@@ -1,7 +1,10 @@
 <script>
+  import { addTodo } from "../stores/store";
+
   let text;
 
   function handleClick() {
+    if(text) addTodo(text)
     text = "";
   }
 </script>
@@ -10,8 +13,6 @@
   <input placeholder="Add Task" bind:value={text} />
   <button on:click={handleClick}> Button</button>
 </div>
-
-<p>{text ? text : ""}</p>
 
 <style>
   div {

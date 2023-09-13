@@ -1,17 +1,12 @@
 <script>
   import Input from "../components/Input.svelte";
-  import Card from "../components/Card.svelte";
   import List from "../components/List.svelte";
-
-  let title = "Homepage";
 </script>
 
 <div class="wrapper">
-  <h1>{title}</h1>
+  <h1>Homepage</h1>
   <Input />
   <List />
-  <Card text="Card text" />
-  <Card text="Some other ard text" />
 </div>
 
 <style>
