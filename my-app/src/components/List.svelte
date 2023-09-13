@@ -1,10 +1,10 @@
 <script>
   import { list } from "../stores/store.js";
-  import { get } from "svelte/store";
+  import Card from "./Card.svelte";
 </script>
 
 <div>
-  {#each $list as item}
-    <!---->
+  {#each $list as props}
+    <Card {props} />
   {/each}
 </div>

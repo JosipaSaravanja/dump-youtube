@@ -1,6 +1,7 @@
 <script>
 	import { deleteTodo } from "../stores/store";
 	export let props;
+	console.log(props)
 </script>
 
 <div>
