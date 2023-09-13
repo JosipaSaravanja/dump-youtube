@@ -30,3 +30,11 @@ export const deleteTodo = (id) => {
 	});
 };
 
+list.update((currentTodos) => {
+	return currentTodos.map((todo) => {
+		if (todo.id === id) {
+			return { ...todo, isFinished: !todo.isFinished };
+		}
+		return todo;
+	});
+});
