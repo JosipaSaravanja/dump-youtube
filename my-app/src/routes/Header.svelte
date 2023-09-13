@@ -8,13 +8,13 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z"/>
 		</svg>
 		<ul>
-			<li>
+			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">All</a>
 			</li>
-			<li>
+			<li aria-current={$page.url.pathname.startsWith('/todo') ? 'page' : undefined}>
 				<a href="/todo">Todo</a>
 			</li>
-			<li>
+			<li aria-current={$page.url.pathname === '/done' ? 'page' : undefined}>
 				<a href="/done">Done</a>
 			</li>
 		</ul>
@@ -62,6 +62,18 @@
 	li {
 		position: relative;
 		height: 100%;
+	}
+
+	li[aria-current='page']::before {
+		--size: 6px;
+		content: '';
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: calc(50% - var(--size));
+		border: var(--size) solid transparent;
+		border-top: var(--size) solid var(--color-theme-1);
 	}
 
 	nav a {
