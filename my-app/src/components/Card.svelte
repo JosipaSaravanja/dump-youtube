@@ -1,5 +1,5 @@
 <script>
-  import { deleteTodo } from "../stores/store";
+  import { deleteTodo, completeTodo } from "../stores/store";
   export let props;
 </script>
 
