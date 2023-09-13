@@ -1,9 +1,12 @@
 <script>
-    let title = 'Homepage'
+  import Input from "../components/Input.svelte";
+
+  let title = "Homepage";
 </script>
 
 <div class="wrapper">
   <h1>{title}</h1>
+  <Input />
 </div>
 
 <style>
